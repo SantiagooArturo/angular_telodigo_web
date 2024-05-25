@@ -1,1 +1,72 @@
-<p>header works!</p>
+<header>
+    <nav class="bg-primary shadow-header z-30 fixed left-0 top-0 w-full duration-500">
+      <div class="container_header h-[4.5rem] flex items-center justify-between">
+      
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!-- Icon when menu is closed. -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+  
+        <div class="ml-32 w-48"> <!-- Agregamos margen a la izquierda -->
+          <img src="assets/logo.png" alt="logo">
+        </div>
+  
+        <div class="mr-36"> <!-- Agregamos margen a la derecha -->
+          <div type="button" class="btn_primary py-1.5 hidden md:block custom-button">
+            Pre-Registro
+          </div>
+          <!-- Profile dropdown -->
+        </div>
+        
+      </div>
+  
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+<style>
+.custom-button {
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 
+    0 0 3px #A238FF, /* Sombra interna con el color del borde */
+    0 0 6px #A238FF, /* Sombra media con el color del borde */
+    0 0 9px #A238FF, /* Sombra externa con el color del borde */
+    0 0 12px rgba(162, 56, 255, 0.4); /* Sombra exterior fosforescente */
+  background-color: #A238FF; /* Fondo lila */
+  color: white; /* Color del texto */
+  padding: 5px 24px; /* Espaciado interno */
+  width: auto; /* Ancho automático */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+  font-weight: 300; /* Peso de la fuente (delgada) */
+}
+
+.custom-button:hover {
+  background-color: white; /* Fondo blanco al pasar el cursor */
+  color: black; /* Texto negro al pasar el cursor */
+}
+
+
+
+</style>
