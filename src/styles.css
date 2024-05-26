@@ -1,3 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Questrial&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #222323;
+  font-family: "Questrial", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+
+@layer utilities {
+  .container_header {
+    @apply w-[93%] max-w-7xl mx-auto
+  }
+  .container_setions {
+    @apply w-[88%] max-w-7xl mx-auto
+  }
+}
+
+
+@layer components {
+  .btn_primary {
+    @apply bg-secondary px-6 text-white font-medium text-sm w-fit py-2 rounded-full shadow-btn hover:bg-white hover:text-primary transition-colors duration-200 ease-linear cursor-pointer
+  }
+  .card {
+    @apply bg-primary max-w-[22rem] lg:max-w-[20rem] px-5 pt-5 pb-7 rounded-xl shadow-card 
+  }
+}
+
+
+/* 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #222323;
+  font-family: "Questrial", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: #fff;
+} */
+
+/* @layer utilities {
+  .container_header {
+    @apply w-[93%] max-w-7xl mx-auto
+  }
+  .container_setions {
+    @apply w-[88%] max-w-7xl mx-auto
+  }
+} */

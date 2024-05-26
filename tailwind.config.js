@@ -2,6 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
+    "./pages/**/*.{html,ts}",
+    "./components/**/*.{html,ts}"
   ],
   theme: {
     extend: {
@@ -10,7 +12,7 @@ module.exports = {
         'secondary': '#A238FF'
       },
       backgroundImage: {
-        'hero': "url('/src/assets/img/hero_bg.jpg')",
+        'hero': "url('/assets/img/hero_bg.jpg')",
         'footer': 'url("/src/assets/img/footer_bg.jpg")',
         'left_bg': 'url("/src/assets/img/left_bg.png")',
         'darck_bg': 'url("/src/assets/img/darck_bg.png")',
