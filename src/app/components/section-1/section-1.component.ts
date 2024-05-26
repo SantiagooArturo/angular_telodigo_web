@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit   , Output} from '@angular/core';
 import { mobile_stores,  phone_screen_hero } from '../../../utils/images';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { fadeIn } from './animation';
+import { CommonModule } from '@angular/common';
 /**
  * import { mobile_stores, phone_screen_hero } from '../../utils/images'
 import { fadeInHero } from '../../animations/Animations'
@@ -9,32 +11,30 @@ import { fadeInHero } from '../../animations/Animations'
 @Component({
   selector: 'app-section-1',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   animations: [
-    trigger('fadeIn', [
+    trigger('childAnimation', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate('1s ease-out', style({ opacity: 1 }))
-      ])
-    ]),
-    trigger('fadeInHero', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-250px) rotate(85deg)' }),
-        animate('1.1s cubic-bezier(0.05, 0.15, 0.35, 0.75)', style({ opacity: 1, transform: 'translateY(0) rotate(0)' }))
+        style({ opacity: 0, transform: 'translateX(200px) translateY(-250px) rotate(85deg)' }),
+        animate('1.2s 1s cubic-bezier(0.05, 0.15, 0.35, 0.75)', style({ opacity: 1, transform: 'translateX(0) translateY(0) rotate(0)' }))
       ])
     ])
   ],
   templateUrl: './section-1.component.html',
   styleUrl: './section-1.component.css'
 })
-export class Section1Component {
+export class Section1Component implements AfterViewInit{
+
   mobile_stores = mobile_stores;
   phone_screen_hero = phone_screen_hero;
+  estadoDeAnimacion:string = 'hidden'; 
 
-  public state = 'hidden';
+  showElement = false;
 
   ngAfterViewInit() {
-    this.state = 'show';
+    setTimeout(() => {
+      this.showElement = true;
+    }, 0); // 2000 milisegundos = 2 segundos
   }
-
+ 
 }

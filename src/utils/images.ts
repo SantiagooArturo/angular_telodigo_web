@@ -45,3 +45,4 @@
  //};
  export const mobile_stores = 'assets/img/mobile_stores.png';
  export const phone_screen_hero = 'assets/img/phone_screen_hero.png';
+ export const hero_bg = 'assets/img/hero_bg.jpg';
