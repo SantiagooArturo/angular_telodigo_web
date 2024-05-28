@@ -3,10 +3,7 @@ import { mobile_stores,  phone_screen_hero } from '../../../utils/images';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { fadeIn } from './animation';
 import { CommonModule } from '@angular/common';
-/**
- * import { mobile_stores, phone_screen_hero } from '../../utils/images'
-import { fadeInHero } from '../../animations/Animations'
- */
+
  
 @Component({
   selector: 'app-section-1',

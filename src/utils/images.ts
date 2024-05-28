@@ -46,3 +46,7 @@
  export const mobile_stores = 'assets/img/mobile_stores.png';
  export const phone_screen_hero = 'assets/img/phone_screen_hero.png';
  export const hero_bg = 'assets/img/hero_bg.jpg';
+
+ export const mesage = 'assets/icons/mesage.png';
+ export const phone_screen_only4 = 'assets/img/phone_screen_only4.png';
+ export const phone_screen_only4_mobile = 'assets/img/phone_screen_only4.png';
