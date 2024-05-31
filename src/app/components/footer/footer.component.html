@@ -1,0 +1,31 @@
+
+
+<footer class="bg-footer bg-cover pt-6 pb-10 md:pb-16 text-sm border-t md:border-none text-white">
+    <div class="md:w-[80%] max-w-6xl m-auto space-y-6">
+      <div class="flex md:items-center justify-around md:justify-between">
+        <div class="flex flex-col md:flex-row gap-1.5 md:gap-10">
+          <div class="hover:text-secondary duration-500" *ngFor="let social of link_social">
+            <a href={{social.link}} target="_blank">{{social.text}}</a>
+          </div>
+         
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-1.5 md:gap-6">
+          <p>Términos y condiciones</p>
+          <p>Política de pivacidad</p>
+        </div>
+      </div>
+      <div class="hidden md:block h-[2px] bg-white" >    </div>
+      <div class="flex flex-col-reverse gap-5 md:flex-row items-center justify-between">
+        <div>
+          <p>© 2024 Creado por TELOdigoapp.site</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <div *ngFor="let image of images">
+            <img [src]="image" alt="Image description">
+          </div>
+          
+        </div>
+      </div>
+  
+    </div>
+  </footer>

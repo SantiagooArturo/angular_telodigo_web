@@ -1,7 +1,6 @@
 import { Component, AfterViewInit   , Output} from '@angular/core';
 import { mobile_stores,  phone_screen_hero } from '../../../utils/images';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { fadeIn } from './animation';
 import { CommonModule } from '@angular/common';
 
  

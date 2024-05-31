@@ -49,4 +49,12 @@
 
  export const mesage = 'assets/icons/mesage.png';
  export const phone_screen_only4 = 'assets/img/phone_screen_only4.png';
- export const phone_screen_only4_mobile = 'assets/img/phone_screen_only4.png';
+ export const phone_screen_only4_mobile = 'assets/img/phone_screen_only4.png'; 
+ export const visa = 'assets/icons/visa.png';
+ export const mastercard = 'assets/icons/mastercard.png';
+ export const diners = 'assets/icons/diners.png';
+ export const amex = 'assets/icons/amex.png';
+ export const paypal = 'assets/icons/paypal.png';
+
+
+
