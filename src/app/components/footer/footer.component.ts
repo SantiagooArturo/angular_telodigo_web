@@ -22,7 +22,7 @@ export class FooterComponent {
   link_social: {link: string, text: string}[] = [
     {text: 'Instagram', link: 'https://www.instagram.com/telodigo.pe'},
     {text: 'Facebook', link: ''},
-    {text: 'Twitter', link: ''},
+    {text: 'X', link: ''},
     {text: 'Tiktok', link: ''}
   ]
 }
