@@ -1,0 +1,15 @@
+.container_setions {
+    position: relative;
+    background: url('../../../assets/img/center_gradian.png') center ;
+    min-height: 135vh; /* Sets the minimum height to 100% of the viewport height */
+    color: white; /* Ensures text remains readable */
+    width: 100%;
+    max-width: 100%;
+    font-family: "Poppins", sans-serif;
+    padding-top: 60px; /* Adjust padding as needed */
+    padding-bottom: 60px; /* Adjust padding as needed */
+}
+p {
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+}

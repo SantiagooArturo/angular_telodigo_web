@@ -1,0 +1,73 @@
+<section class="container_setions relative space-y-16">
+    <div>
+        <br><h3 class="text-2xl md:text-4xl text-center">
+            Descubre todas nuestras funciones...
+        </h3><br><br>
+        <div>
+            <div class="grid justify-center md:pl-5">
+                <div class="motion-div w-[80%]">
+                    <img src="../../../assets/img/mobile_screens.png" alt="mobile_screens" />
+                </div>
+            </div>
+            <div class="motion-div hidden lg:block absolute top-[37%] left-[10.5%]">
+                <div class="card">
+                    <div style="display: flex;">
+                        <img src="../../../assets/icons/battery.png" style="width: 15%; height: 15%;" alt="">
+                        <h4 class="card-title" style="font-size: 20px;"> Paga con tus apps favoritas</h4>
+                    </div><br>
+                    <p class="card-text">Podrás pagar con Yape, Plin, Tarjetas deb/cred o en Efectivo.</p>
+                </div>
+            </div>
+            <div class="motion-div hidden lg:block absolute top-[23%] right-[14%]">
+                <div class="card">
+                    <div style="display: flex;">
+                        <img src="../../../assets/icons/battery.png" style="width: 15%; height: 15%;" alt="">
+                        <h4 class="card-title" style="font-size: 20px;">Encuentra todo tipo de TELOS</h4>
+                    </div><br>
+                    <p class="card-text">En nuestra sección "Descubre" encontrarás una variedad de Telos según tus preferencias.</p>
+                </div>
+            </div>
+            <div class="motion-div hidden lg:block absolute top-[75%] left-[17%]">
+                <div class="card">
+                    <div style="display: flex;">
+                        <img src="../../../assets/icons/battery.png" style="width: 15%; height: 15%;" alt="">
+                        <h4 class="card-title" style="font-size: 20px;">Gana recompensas</h4>
+                    </div><br>
+                    <p class="card-text">Recibirás TELOcréditos según el número de reservas que tengas mediante nuestra app.</p>
+                </div>
+            </div>
+            <div class="motion-div hidden lg:block absolute bottom-[20%] right-[18%]">
+                <div class="card">
+                    <div style="display: flex;">
+                        <img src="../../../assets/icons/battery.png" style="width: 15%; height: 15%;" alt="">
+                        <h4 class="card-title" style="font-size: 20px;">Guarda tus TELOS favoritos</h4>
+                    </div><br>
+                    <p class="card-text">Podrás añadir los TELOS que te vacilaron a nuestra sección "Favoritos".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <script>
+        const { motion } = window['framer-motion'];
+    
+        function fadeIn(direction = 'up', delay = 0.3) {
+            return {
+                hidden: { opacity: 0, y: direction === 'up' ? 30 : 0, x: direction === 'right' ? 30 : 0 },
+                show: { opacity: 1, y: 0, x: 0, transition: { delay: delay, duration: 0.75 } }
+            };
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const motionDivs = document.querySelectorAll('.motion-div');
+            motionDivs.forEach((div, index) => {
+                const direction = index % 2 === 0 ? 'up' : 'right';
+                const delay = 0.7 + index * 0.05;
+                const animation = fadeIn(direction, delay);
+                motion.div(div, animation);
+            });
+        });
+    </script>
+    
+  
