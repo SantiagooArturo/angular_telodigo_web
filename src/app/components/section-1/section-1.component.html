@@ -1,28 +1,23 @@
-
-
-
-<section class='bg-hero bg-bottom bg-cover text-white' >
-
+<section class='bg-hero bg-bottom bg-cover text-white'>
   <div class='container_setions pt-20 pb-14 lg:pb-28 flex flex-col-reverse md:flex-row lg:justify-between items-center gap-5'>
     <div class='text-center md:text-start lg:mt-32 flex-shrink-0'>
-    <h2 class='text-4xl md:text-5xl lg:text-6xl lg:leading-[4.5rem] font-bold'>
-      HOSTALES POR <br/> HORAS
-    </h2>
-    <p class='text-xl mb-7 lg:mb-5'>Más cercanos a ti...</p>
-    <a class="btn_primary px-7 py-3" >DOWNLOAD</a>
-  </div>
+      <h2 class='text-4xl md:text-5xl lg:text-6xl lg:leading-[4.5rem] font-bold'>
+        HOSTALES POR <br/> HORAS
+      </h2>
+      <p class='text-xl mb-7 lg:mb-5'>Más cercanos a ti...</p>
+      <a class="btn_primary px-7 py-3" (click)="onDownloadClick()">DOWNLOAD</a>
+    </div>
     <div class='flex-1 md:flex-none md:w-[55%] lg:w-[47%] lg:translate-x-20 mt-5 lg:mt-0 overflow-hidden'>
       <div class='relative w-full'>
         <div class='absolute w-full left-[2.5%] top-[40%] h-full'>
-          <!-- [@childAnimation]  -->
-          <div class='w-[50%] '[@childAnimation] *ngIf="showElement">
+          <div class='w-[50%]' [@childAnimation] *ngIf="showElement">
             <img src={{mobile_stores}} alt='mobile_stores' />
           </div>
         </div>
-        <div  class='-rotate-[20deg]'>
+        <div class='-rotate-[20deg]'>
           <img src={{phone_screen_hero}} alt='phone_screen_hero' />
         </div>
       </div>
     </div>
-</div>
+  </div>
 </section>

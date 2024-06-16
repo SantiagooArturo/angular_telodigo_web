@@ -1,0 +1,6 @@
+.background-section {
+    background-image: url('/src/assets/img/darck_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
