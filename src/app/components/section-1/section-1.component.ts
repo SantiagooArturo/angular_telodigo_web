@@ -1,9 +1,8 @@
-import { Component, AfterViewInit   , Output} from '@angular/core';
-import { mobile_stores,  phone_screen_hero } from '../../../utils/images';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { Component, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { mobile_stores, phone_screen_hero } from '../../../utils/images';
+import { trigger, transition, style, animate } from '@angular/animations';
 
- 
 @Component({
   selector: 'app-section-1',
   standalone: true,
@@ -17,20 +16,23 @@ import { CommonModule } from '@angular/common';
     ])
   ],
   templateUrl: './section-1.component.html',
-  styleUrl: './section-1.component.css'
+  styleUrls: ['./section-1.component.css']
 })
-export class Section1Component implements AfterViewInit{
+export class Section1Component implements AfterViewInit {
+  @Output() showSection2 = new EventEmitter<void>();
 
   mobile_stores = mobile_stores;
   phone_screen_hero = phone_screen_hero;
-  estadoDeAnimacion:string = 'hidden'; 
-
+  estadoDeAnimacion: string = 'hidden';
   showElement = false;
 
   ngAfterViewInit() {
     setTimeout(() => {
       this.showElement = true;
-    }, 0); // 2000 milisegundos = 2 segundos
+    }, 0);
   }
- 
+
+  onDownloadClick() {
+    this.showSection2.emit();
+  }
 }

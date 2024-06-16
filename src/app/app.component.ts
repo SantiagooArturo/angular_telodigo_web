@@ -25,4 +25,14 @@ export class AppComponent {
   onParentAnimationDone(event: any) {
     this.showChild = true;
   }
+
+  showSection2 = false;
+
+  onShowSection2() {
+    this.showSection2 = true;
+  }
+
+  onCloseSection2() {
+    this.showSection2 = false;
+  }
 }
