@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 import { Section1dowloandComponent } from './components/section1dowloand/section1dowloand.component';
 import { Error404Component } from './components/error-404/error-404.component';
+import { CommonModule } from '@angular/common'; // Importar CommonModule
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { Error404Component } from './components/error-404/error-404.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HeaderComponent,
     FormsModule,

@@ -7,7 +7,7 @@
   <!-- El componente hijo va dentro del componente padre -->
 
   <app-section-1 *ngIf="!showSection2" (showSection2)="onShowSection2()"></app-section-1>
-<app-section1dowloand *ngIf="showSection2" (close)="onCloseSection2()"></app-section1dowloand>
+  <app-section1dowloand *ngIf="showSection2" (close)="onCloseSection2()"></app-section1dowloand>
 
   <app-section-2 *ngIf="!showSection2" (showSection2)="onShowSection2()"></app-section-2>
   <app-section-3  *ngIf="!showSection2" (showSection2)="onShowSection2()"></app-section-3>
