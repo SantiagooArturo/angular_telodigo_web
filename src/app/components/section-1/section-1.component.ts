@@ -1,7 +1,8 @@
-import { Component, AfterViewInit   , Output} from '@angular/core';
+import { Component, AfterViewInit   , Output, ElementRef, ViewChild, HostListener} from '@angular/core';
 import { mobile_stores,  phone_screen_hero } from '../../../utils/images';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
+import { VisibilityCounterService } from '../../visibility-counter.service';
 
  
 @Component({
@@ -27,10 +28,49 @@ export class Section1Component implements AfterViewInit{
 
   showElement = false;
 
+  @ViewChild('componentElement') componentElement: ElementRef | undefined;
+
+  constructor(private elementRef: ElementRef) {}
+
+ 
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkVisibility(); // Llama a checkVisibility() cada vez que se hace scroll
+  }
+
+
+  
+  checkVisibility() {
+    if (this.componentElement && this.componentElement.nativeElement instanceof HTMLElement) {
+      const element = this.componentElement.nativeElement;
+      const bounds = element.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const threshold = viewportHeight * 0.5; 
+
+      
+      if (bounds.top < viewportHeight - threshold && bounds.bottom >= threshold) {
+        this.showElement = true;
+      } else {
+        if (bounds.bottom < 0 || bounds.top > viewportHeight) {
+          this.showElement = false;
+        } else {
+          this.showElement = false;
+        }
+      }
+    } else {
+      console.warn('componentElement.nativeElement no es un HTMLElement válido');
+    }
+  
+  }
   ngAfterViewInit() {
     setTimeout(() => {
-      this.showElement = true;
-    }, 0); // 2000 milisegundos = 2 segundos
+     
+      this.checkVisibility();
+    }, 2000); // 2000 milisegundos = 2 segundos
+   
   }
+
+
  
 }

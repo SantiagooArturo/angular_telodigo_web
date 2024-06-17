@@ -18,6 +18,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class AppComponent {
+
+
+
+
+  
   title = 'lp-telodigo';
   
   showChild = false;
