@@ -13,11 +13,10 @@ import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 import { Section1dowloandComponent } from './components/section1dowloand/section1dowloand.component';
 import { Error404Component } from './components/error-404/error-404.component';
 
+
 @NgModule({
   declarations: [
     AppComponent
-    
-    
   ],
   imports: [
     BrowserModule,
