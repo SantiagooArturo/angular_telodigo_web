@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -17,15 +18,17 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ])
   ]
 })
-export class AppComponent {
-
-
-
-
-  
-  title = 'lp-telodigo';
+export class AppComponent implements OnInit{
   
   showChild = false;
+
+  constructor(private titulo: Title) { 
+    titulo.setTitle('Telodigo')
+  }
+
+  ngOnInit(): void {
+  
+  }
 
   onParentAnimationDone(event: any) {
     this.showChild = true;

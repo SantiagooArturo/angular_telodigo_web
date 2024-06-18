@@ -21,4 +21,17 @@ export class HeaderComponent {
       navbar.classList.remove('bg-primary' , 'shadow-header');
     }
   }
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const navbar = this.el.nativeElement.querySelector('.navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('bg-primary', 'shadow-header');
+      navbar.classList.remove('bg-transparent');
+    } else {
+      navbar.classList.add('bg-transparent');
+      navbar.classList.remove('bg-primary' , 'shadow-header');
+    }
+  }
 }

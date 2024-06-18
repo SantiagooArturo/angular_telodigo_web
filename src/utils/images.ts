@@ -56,5 +56,9 @@
  export const amex = 'assets/icons/amex.png';
  export const paypal = 'assets/icons/paypal.png';
 
+export const slide1 = 'assets/img/phone_screen_only1.webp';
+export const slide2 = 'assets/img/phone_screen_only2.webp';
+export const slide3 = 'assets/img/phone_screen_only3.webp'; 
+
 
 

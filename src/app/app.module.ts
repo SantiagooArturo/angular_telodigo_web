@@ -14,11 +14,10 @@ import { Section1dowloandComponent } from './components/section1dowloand/section
 import { Error404Component } from './components/error-404/error-404.component';
 import { CommonModule } from '@angular/common'; // Importar CommonModule
 
+
 @NgModule({
   declarations: [
     AppComponent
-    
-    
   ],
   imports: [
     BrowserModule,
